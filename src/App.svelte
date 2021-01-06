@@ -2,6 +2,8 @@
 	import Nested from "../src/Nested.svelte";
 	import ButtonClick from "../src/ButtonClick.svelte";
 	import KeyedEachIterating from "./KeyedEachIterating.svelte";
+	import Await from "./Await.svelte";
+	import Events from "./Events.svelte";
 	export let name;
 	const theAnswer = "Gak ada jawaban tu";
 </script>
@@ -38,7 +40,9 @@
 		<a href="https://svelte.dev/tutorial">Svelte tutorial</a>
 		to learn how to build Svelte apps.
 	</p>
+	<Events />
 	<ButtonClick />
 	<Nested {theAnswer} />
 	<KeyedEachIterating />
+	<Await />
 </main>
