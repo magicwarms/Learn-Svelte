@@ -1,6 +1,13 @@
 <script>
+    import Info from "../src/Info.svelte";
     let imgUrl = "https://source.unsplash.com/random/400x200";
     let words = "Hello this word from nested component";
+    export let answer;
+    const biodata = {
+        name: "Yuna",
+        birthdate: "09 July 2017",
+        hobby: "Watch youtube",
+    };
 </script>
 
 <style>
@@ -11,3 +18,5 @@
 
 <p class="classP">{words}</p>
 <img src={imgUrl} alt="Random pic from Unsplash API" />
+<p>Jawaban nya apa wak? {answer}</p>
+<Info {...biodata} />

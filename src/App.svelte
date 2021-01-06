@@ -36,7 +36,7 @@
 		<a href="https://svelte.dev/tutorial">Svelte tutorial</a>
 		to learn how to build Svelte apps.
 	</p>
-	<Nested />
+	<Nested answer={'Gilak kau'} />
 	<br />
 	<ButtonClick />
 </main>

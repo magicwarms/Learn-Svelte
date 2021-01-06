@@ -15,6 +15,7 @@
         numbers.pop();
     }
     const addNumber = () => (numbers = [...numbers, numbers.length + 1]);
+    $: sum = numbers.reduce((t, n) => t + n, 0);
 </script>
 
 <button on:click={handleClick}>Clicked
@@ -25,4 +26,4 @@
 
 <button on:click={addNumber}>Add number click</button>
 
-<h1>Added {numbers}</h1>
+<h1>Added {numbers.join(' + ')} = {sum}</h1>
