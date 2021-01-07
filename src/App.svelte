@@ -1,22 +1,28 @@
 <script>
-	import Nested from "../src/Nested.svelte";
-	import ButtonClick from "../src/ButtonClick.svelte";
-	import KeyedEachIterating from "./KeyedEachIterating.svelte";
-	import Await from "./Await.svelte";
-	import Events from "./Events.svelte";
-	import InnerDispatcher from "./InnerDispatcher.svelte";
-	import EventForwarding from "./EventForwarding.svelte";
-	import BindingTextInput from "./BindingTextInput.svelte";
+	import BindingSelectInput from "./BindingSelectInput.svelte";
+
+	// import Nested from "../src/Nested.svelte";
+	// import ButtonClick from "../src/ButtonClick.svelte";
+	// import KeyedEachIterating from "./KeyedEachIterating.svelte";
+	// import Await from "./Await.svelte";
+	// import Events from "./Events.svelte";
+	// import InnerDispatcher from "./InnerDispatcher.svelte";
+	// import EventForwarding from "./EventForwarding.svelte";
+	// import BindingTextInput from "./BindingTextInput.svelte";
+	// import BindingNumericInput from "./BindingNumericInput.svelte";
+	// import BindingCheckboxInput from "./BindingCheckboxInput.svelte";
+	// import BindingGroupInput from "./BindingGroupInput.svelte";
+	// import BindingTextareaInput from "./BindingTextareaInput.svelte";
 	export let name;
-	const theAnswer = "Gak ada jawaban tu";
+	// const theAnswer = "Gak ada jawaban tu";
 
-	function handleMessage(event) {
-		alert(event.detail.text);
-	}
+	// function handleMessage(event) {
+	// 	alert(event.detail.text);
+	// }
 
-	function eventForwardingYo() {
-		alert("Apa kau bengak!");
-	}
+	// function eventForwardingYo() {
+	// 	alert("Apa kau bengak!");
+	// }
 </script>
 
 <style>
@@ -51,12 +57,17 @@
 		<a href="https://svelte.dev/tutorial">Svelte tutorial</a>
 		to learn how to build Svelte apps.
 	</p>
+	<BindingSelectInput />
+	<!-- <BindingTextareaInput /><br />
+	<BindingGroupInput /> -->
+	<!-- <BindingCheckboxInput />
 	<BindingTextInput />
+	<BindingNumericInput />
 	<EventForwarding on:click={eventForwardingYo} />
 	<InnerDispatcher on:dispatchHello={handleMessage} />
 	<Events />
 	<ButtonClick />
 	<Nested {theAnswer} />
 	<KeyedEachIterating />
-	<Await />
+	<Await /> -->
 </main>
