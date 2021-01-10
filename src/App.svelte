@@ -11,7 +11,7 @@
 	// import BindingTextInput from "./BindingTextInput.svelte";
 	// import BindingNumericInput from "./BindingNumericInput.svelte";
 	// import BindingCheckboxInput from "./BindingCheckboxInput.svelte";
-	// import BindingGroupInput from "./BindingGroupInput.svelte";
+	import BindingGroupInput from "./BindingGroupInput.svelte";
 	// import BindingTextareaInput from "./BindingTextareaInput.svelte";
 	export let name;
 	// const theAnswer = "Gak ada jawaban tu";
@@ -58,8 +58,8 @@
 		to learn how to build Svelte apps.
 	</p>
 	<BindingSelectInput />
-	<!-- <BindingTextareaInput /><br />
-	<BindingGroupInput /> -->
+	<!-- <!-- <BindingTextareaInput /><br /> -->
+	<BindingGroupInput />
 	<!-- <BindingCheckboxInput />
 	<BindingTextInput />
 	<BindingNumericInput />
