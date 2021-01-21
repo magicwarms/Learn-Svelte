@@ -1,6 +1,7 @@
 <script>
   // import BindingSelectInput from "./BindingSelectInput.svelte";
 
+  import BindingComponent from "./BindingComponent.svelte";
   // import Nested from "../src/Nested.svelte";
   // import ButtonClick from "../src/ButtonClick.svelte";
   // import KeyedEachIterating from "./KeyedEachIterating.svelte";
@@ -14,9 +15,9 @@
   // import BindingGroupInput from "./BindingGroupInput.svelte";
   // import BindingContenteditable from "./BindingContenteditable.svelte";
   // import BindingEach from "./BindingEach.svelte";
-  import BindingDimensions from "./BindingDimensions.svelte";
-  import BindingMediaElements from "./BindingMediaElements.svelte";
-  import BindingThis from "./BindingThis.svelte";
+  // import BindingDimensions from "./BindingDimensions.svelte";
+  // import BindingMediaElements from "./BindingMediaElements.svelte";
+  // import BindingThis from "./BindingThis.svelte";
   // import BindingTextareaInput from "./BindingTextareaInput.svelte";
   export let name;
   // const theAnswer = "Gak ada jawaban tu";
@@ -28,6 +29,12 @@
   // function eventForwardingYo() {
   // 	alert("Apa kau bengak!");
   // }
+  let pin;
+  $: view = pin ? pin.replace(/\d(?!$)/g, "*") : "enter your pin";
+
+  function handleSubmit() {
+    alert(`submitted ${pin}`);
+  }
 </script>
 
 <main>
@@ -38,7 +45,7 @@
     to learn how to build Svelte apps.
   </p>
   <!-- <BindingSelectInput /> -->
-  <!-- <!-- <BindingTextareaInput /><br /> -->
+  <!-- <BindingTextareaInput /><br /> -->
   <!-- <BindingGroupInput /> -->
   <!-- <BindingCheckboxInput />
 	<BindingTextInput />
@@ -54,7 +61,9 @@
   <!-- <BindingEach /> -->
   <!-- <BindingMediaElements /> -->
   <!-- <BindingDimensions /> -->
-  <BindingThis />
+  <!-- <BindingThis /> -->
+  <h1 style="color: {pin ? '#333' : '#ccc'}">{view}</h1>
+  <BindingComponent bind:value={pin} on:submit={handleSubmit} />
 </main>
 
 <style>
