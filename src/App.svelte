@@ -1,7 +1,8 @@
 <script>
   // import BindingSelectInput from "./BindingSelectInput.svelte";
 
-  import BindingComponent from "./BindingComponent.svelte";
+  // import BindingComponent from "./BindingComponent.svelte";
+  import OnMount from "./OnMount.svelte";
   // import Nested from "../src/Nested.svelte";
   // import ButtonClick from "../src/ButtonClick.svelte";
   // import KeyedEachIterating from "./KeyedEachIterating.svelte";
@@ -29,12 +30,13 @@
   // function eventForwardingYo() {
   // 	alert("Apa kau bengak!");
   // }
-  let pin;
-  $: view = pin ? pin.replace(/\d(?!$)/g, "*") : "enter your pin";
+  // for Binding Component
+  // let pin;
+  // $: view = pin ? pin.replace(/\d(?!$)/g, "*") : "enter your pin";
 
-  function handleSubmit() {
-    alert(`submitted ${pin}`);
-  }
+  // function handleSubmit() {
+  //   alert(`submitted ${pin}`);
+  // }
 </script>
 
 <main>
@@ -62,8 +64,12 @@
   <!-- <BindingMediaElements /> -->
   <!-- <BindingDimensions /> -->
   <!-- <BindingThis /> -->
-  <h1 style="color: {pin ? '#333' : '#ccc'}">{view}</h1>
-  <BindingComponent bind:value={pin} on:submit={handleSubmit} />
+  <!-- for Binding Component START -->
+  <!-- <h1 style="color: {pin ? '#333' : '#ccc'}">{view}</h1> -->
+  <!-- <BindingComponent bind:value={pin} on:submit={handleSubmit} /> -->
+  <!-- for Binding Component END -->
+
+  <OnMount />
 </main>
 
 <style>
