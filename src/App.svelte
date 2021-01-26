@@ -1,8 +1,15 @@
 <script>
   // import BindingSelectInput from "./BindingSelectInput.svelte";
 
+  import MotionTweened from "./MotionTweened.svelte";
+  import Stores from "./Stores.svelte";
+  import Transitions from "./Transitions.svelte";
+
+  // import BeforeAndAfterUpdate from "./BeforeAndAfterUpdate.svelte";
+  // import Tick from "./Tick.svelte";
+
   // import BindingComponent from "./BindingComponent.svelte";
-  import OnMount from "./OnMount.svelte";
+  // import OnMount from "./OnMount.svelte";
   // import Nested from "../src/Nested.svelte";
   // import ButtonClick from "../src/ButtonClick.svelte";
   // import KeyedEachIterating from "./KeyedEachIterating.svelte";
@@ -68,8 +75,12 @@
   <!-- <h1 style="color: {pin ? '#333' : '#ccc'}">{view}</h1> -->
   <!-- <BindingComponent bind:value={pin} on:submit={handleSubmit} /> -->
   <!-- for Binding Component END -->
-
-  <OnMount />
+  <!-- <OnMount /> -->
+  <!-- <BeforeAndAfterUpdate /> -->
+  <!-- <Tick /> -->
+  <!-- <Stores /> -->
+  <!-- <MotionTweened /> -->
+  <Transitions />
 </main>
 
 <style>
